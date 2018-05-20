@@ -8,8 +8,8 @@ import {CarsService} from './cars/cars.service';
 import {HttpModule} from '@angular/http';
 import {CoreModule} from './core-module/core.module';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
-import {CarsListComponent} from './cars/cars-list/cars-list.component';
+import {AppRoutingModule} from './app-routing.module';
+import {CarsRoutingModule} from './cars/cars-routing.module';
 
 
 @NgModule({
@@ -22,9 +22,8 @@ import {CarsListComponent} from './cars/cars-list/cars-list.component';
     CarsModule,
     HttpModule,
     CoreModule,
-    RouterModule.forRoot([
-      {path: 'cars', component: <any> CarsListComponent}
-    ])
+    AppRoutingModule,
+    CarsRoutingModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]
