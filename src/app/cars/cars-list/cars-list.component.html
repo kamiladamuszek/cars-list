@@ -98,8 +98,8 @@
         <input formControlName="cost" type="text" class="form-control" placeholder="cost">
       </div>
       <div class="col-sm-4">
-        <label>Is Fully Damaged</label>
-        <input type="checkbox" formControlName="isFullyDamaged">
+        <label>Year</label>
+        <input formControlName="year" type="text" class="form-control" placeholder="year">
       </div>
     </div>
     <div class="row form-group">
@@ -111,10 +111,18 @@
         <label>Client Surname</label>
         <input formControlName="clientSurname" type="text" class="form-control" placeholder="client surname">
       </div>
+      <div class="col-sm-4">
+        <label>Is Fully Damaged</label>
+        <input type="checkbox" formControlName="isFullyDamaged">
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button [disabled]="carForm.invalid" type="submit" class="btn btn-primary float-right">Add car</button>
+        <button [disabled]="carForm.invalid" type="submit" (click)="addCar()" class="btn btn-primary float-right">Add
+          car
+        </button>
+        <button (click)="carForm.reset()" class="btn btn-default float-right">Reset
+        </button>
       </div>
     </div>
   </form>

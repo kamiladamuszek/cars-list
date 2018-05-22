@@ -33,6 +33,7 @@ export class CarsListComponent implements OnInit, AfterViewInit {
       plate: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(7)]],
       deliveryDate: [''],
       deadline: [''],
+      year: [''],
       color: [''],
       power: [''],
       clientFirstName: [''],
@@ -46,6 +47,12 @@ export class CarsListComponent implements OnInit, AfterViewInit {
     this.carsService.getCars().subscribe((cars) => {
       this.cars = cars;
       this.countTotalCost();
+    });
+  }
+
+  addCar() {
+    this.carsService.addCar(this.carForm.value).subscribe(() => {
+      this.loadCars();
     });
   }
 

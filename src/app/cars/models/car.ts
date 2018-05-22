@@ -7,6 +7,7 @@ export interface Car {
   deadline: string;
   color: string;
   power: number;
+  year: number;
   clientFirstName: string;
   clientSurname: string;
   cost: number;
