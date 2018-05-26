@@ -10,6 +10,8 @@ import {CoreModule} from './core-module/core.module';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {CarsRoutingModule} from './cars/cars-routing.module';
+import { SurnameShortcutPipe } from './shared-module/pipes/surname-shortcut.pipe';
+import { ImportantDirective } from './shared-module/directives/important.directive';
 
 
 @NgModule({
